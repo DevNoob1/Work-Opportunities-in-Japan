@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobInJapan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            overflow-x: hidden;
+        }
+
+        .carousel {
+            width: 100%;
+            /* Ensure carousel spans the full width of its container */
+            height: 100vh;
+            /* Set carousel height to cover the entire viewport */
+            overflow: hidden;
+            margin-top: 150px;
+            /* Hide overflow to prevent scrollbars */
+        }
+
+        .carousel-item {
+            width: 100%;
+            /* Ensure carousel items take up the full width */
+            height: 100%;
+            /* Ensure carousel items take up the full height */
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            /* Scale images to cover the entire carousel item */
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav
+        class="bg-pink-100 w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg flex  justify-between items-center px-4 md:px-8 py-4">
+        <div class="text-lg md:text-2xl font-bold text-pink-700">Logo</div>
+
+        <div class="md:hidden relative">
+            <button id="toggle-menu" class="text-gray-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="menu-items" class="menu-items hidden absolute right-0 top-12 bg-pink-100 rounded-lg shadow-md">
+                <a href="./" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Home</a>
+                <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">About</a>
+                <a href="./job.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Jobs</a>
+
+            </div>
+        </div>
+
+
+        <div class="hidden md:flex space-x-4">
+            <a href="./" class="text-gray-800 hover:text-pink-700">Home</a>
+            <a href="./about.html" class="text-gray-800 hover:text-pink-700">About</a>
+            <a href="./job.html" class="text-gray-800 hover:text-pink-700">Jobs</a>
+
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+
+    <!-- Brands and companies -->
+    <div class=" flex w-full  bg h-screen flex-row items-center justify-center gap-32" style="margin-bottom: -500px;">
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- A carousel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1300">
+        <ul class="carousel-indicators" ">
+            <li data-target=" #carouselExampleSlidesOnly" data-slide-to="0" class="active">
+            </li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                    src="https://img.freepik.com/free-photo/hiring-concept-with-laptop_23-2149519877.jpg?t=st=1714074223~exp=1714077823~hmac=ed5551a9d4dcb8603514b6765cdb7827f18ecde1de1f57591d1ed7ac7fc2ebb3&w=1380"
+                    alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./123.avif" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://wallpapers.com/images/featured/japan-cupyb43e8vl4w2n7.jpg"
+                    alt="Third slide">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-left">
+        <p>*please select the options from job and location if you don't see any result it might not be there </p>
+        <p>*for testing check Registered Nurse and Nantwich, Cheshire </p>
+        <p>*Check with other locations too if one doesn't show any result </p>
+
+    </div>
+    <div class="container mx-auto p-8">
+
+        <!-- Search Box -->
+        <div class="search-box mb-8">
+            <h2 class="text-lg font-semibold mb-2">Selected Criteria:</h2>
+            <div id="selectedCriteria" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Job Roles and Locations -->
+        <div class="criteria-container">
+            <h2 class="text-lg font-semibold mb-2">Job Roles:</h2>
+            <div id="jobRolesContainer" class="flex flex-wrap gap-2"></div>
+
+            <h2 class="text-lg font-semibold mb-2 mt-4">Locations:</h2>
+            <div id="locationsContainer" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Job Cards Container -->
+        <div id="jobCardsContainer" class="grid grid-cols-1 gap-4"></div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
+
+
+    <!-- Google Translate JavaScript API -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+
+</html>

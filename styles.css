@@ -1,0 +1,274 @@
+*::-webkit-scrollbar {
+    display: none;
+}
+
+#line {
+    height: 275px;
+    width: 2px;
+    background: red;
+    animation: lineAnimation 2s forwards;
+}
+
+#google_translate_element {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: move;
+}
+
+
+@keyframes lineAnimation {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 400px;
+    }
+}
+
+#jap {
+    opacity: 0;
+    animation: slideon 1s forwards;
+}
+
+#logo {
+    opacity: 0;
+    animation: slideIn 1s forwards;
+    color: #7F5A83;
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideon {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation-name: fade-in-up;
+}
+
+
+
+body {
+    background: url('./') no-repeat center center fixed;
+    background: linear-gradient(to top, #f0abab, #d5cfd0, #f8eff0);
+
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    height: 100px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    /* margin: auto; */
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    width: 100%;
+    margin-top: -290px;
+    /* margin-bottom: -300px; */
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    width: 100px;
+
+    position: absolute;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Job Role and Location Boxes */
+.criteria-box {
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    /* White background */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.criteria-box:hover {
+    background-color: #f0f0f0;
+    /* Light gray background on hover */
+}
+
+/* Selected Criteria Boxes */
+.selected-box {
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #8a3ab9;
+    /* Japanese purple border */
+    border-radius: 4px;
+    background-color: #8a3ab9;
+    /* Japanese purple background */
+    color: #ffffff;
+    /* White text color */
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    /* Required for the cherry blossom animation */
+}
+
+.selected-box:hover {
+    background-color: #a355d7;
+    /* Lighter shade of purple on hover */
+}
+
+/* Cherry Blossom Animation */
+.selected-box::before {
+    content: "🌸";
+    /* Cherry blossom emoji */
+    margin-right: 4px;
+    animation: sakura 2s ease infinite;
+    /* Apply the animation */
+}
+
+@keyframes sakura {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Job Cards Container */
+#jobCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#jobCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.job-card {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9d6f6;
+    /* Light peach background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    /* Lift on hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Slightly darker shadow on hover */
+}
+
+/* Additional styling for headings and labels */
+h1,
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-purple {
+    color: #8a3ab9;
+    /* Japanese purple color */
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobInJapan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 5%;
+            background: linear-gradient(to top, #f0abab, #d5cfd0, #f8eff0);
+
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .grid-item {
+            /* background-color: #ffffff; */
+
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            background-color: #f0abab41;
+        }
+
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .col-span-2 {
+            grid-column-end: span 2;
+        }
+
+
+        @media (max-width: 768px) {
+            .grid {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                /* Change to single column layout */
+            }
+
+            .grid-item {
+                padding: 10px;
+                background-color: #f0abab41;
+                /* Reduce padding for smaller screens */
+                width: 300px;
+            }
+
+            /* Adjust image size for smaller screens */
+            .grid-item img {
+                /* Make image width 100% of parent container */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav
+        class="bg-pink-100 w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg flex  justify-between items-center px-4 md:px-8 py-4">
+        <div class="text-lg md:text-2xl font-bold text-pink-700">Logo</div>
+
+        <div class="md:hidden relative">
+            <button id="toggle-menu" class="text-gray-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="menu-items" class="menu-items hidden absolute right-0 top-12 bg-pink-100 rounded-lg shadow-md">
+                <a href="./" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Home</a>
+                <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">About</a>
+                <a href="./job.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Jobs</a>
+
+            </div>
+        </div>
+
+
+        <div class="hidden md:flex space-x-4">
+            <a href="./" class="text-gray-800 hover:text-pink-700">Home</a>
+            <a href="./about.html" class="text-gray-800 hover:text-pink-700">About</a>
+            <a href="./job.html" class="text-gray-800 hover:text-pink-700">Jobs</a>
+
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+
+
+    <!-- About Japan -->
+
+    <div class="grid">
+        <!-- Replace this loop with your content -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1570459027562-4a916cc6113f?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 400px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Nature</h1><br>
+            <p class="image-description">Japan's natural landscapes are diverse, ranging from picturesque cherry blossom
+                gardens to majestic mountains like Mount Fuji. The country's scenic beauty inspires artists,
+                photographers, and nature enthusiasts alike.</p>
+        </div>
+        <div class="grid-item col-span-2">
+            <img src="https://images.unsplash.com/photo-1499072293933-0abf7cc7d0ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dttps://images.unsplash.com/photo-1570459027562-4a916cc6113f?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 500px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Technology</h1><br>
+            <p class="image-description">Japan is renowned for its technological innovations, from robotics and
+                electronics
+                to bullet trains and high-tech gadgets. The nation continues to lead in research and development,
+                shaping the future of technology worldwide.</p>
+        </div>
+        <div class="grid-item" style="background-color: transparent; border: transparent; box-shadow: transparent;">
+            <img src="https://pm1.aminoapps.com/7624/a62ee9a7525226de5f133284f942bc4d06d138a0r1-1378-2039v2_hq.jpg"
+                alt="Japanese Nature" style="width: 100%;">
+        </div>
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1534247555660-d4af46712d27?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 500px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Culture</h1><br>
+            <p class="image-description">Japan's culture is a vibrant blend of ancient traditions and modern influences.
+                It encompasses
+                tea ceremonies, traditional arts like calligraphy and ikebana, as well as festivals such as cherry
+                blossom
+                viewing and matsuri celebrations. From kimono fashion to historical landmarks, Japanese culture is
+                celebrated
+                worldwide for its richness and diversity.</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1566950616521-335084348663?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 500px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Cuisine</h1><br>
+            <p class="image-description">Japanese cuisine is renowned for its delicate flavors, fresh ingredients, and
+                meticulous
+                preparation. From sushi and sashimi to ramen and tempura, Japanese dishes highlight seasonal produce and
+                artistic presentation. Traditional meals like kaiseki and tea ceremonies reflect the deep connection
+                between
+                food and culture in Japan.</p>
+        </div>
+
+        <div class="grid-item col-span-2">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 500px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Arts</h1><br>
+            <p class="image-description">Japanese arts encompass a wide range of expressions, including traditional
+                crafts
+                like ceramics and textiles, as well as contemporary art forms like manga and street art. The country's
+                artistic heritage is celebrated worldwide for its creativity and craftsmanship.</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1564343927509-c2f5a9d07f38?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Japanese Nature" style="height: 500px; width: 100%;"><br>
+            <h1 class="image-title text-xl font-bold">Japanese Festivals</h1><br>
+            <p class="image-description">Japanese festivals, known as matsuri, are vibrant celebrations that highlight
+                local
+                traditions and folklore. From the dazzling lantern festivals to the spirited dance performances, these
+                events showcase the lively spirit of Japanese communities.</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+
+
+    <!-- Google Translate JavaScript API -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

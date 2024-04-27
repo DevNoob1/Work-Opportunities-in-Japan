@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobInJapan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100  flex flex-col items-center p-10 ">
+
+    <!-- translator for the page -->
+
+    <div id="google_translate_element"></div>
+
+
+    <!-- Navbar to Navigate between pages -->
+    <nav
+        class="bg-pink-100 w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg flex  justify-between items-center px-4 md:px-8 py-4">
+        <div class="text-lg md:text-2xl font-bold text-pink-700">Logo</div>
+
+        <div class="md:hidden relative">
+            <button id="toggle-menu" class="text-gray-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+
+            <div id="menu-items" class="menu-items hidden absolute right-0 top-12 bg-pink-100 rounded-lg shadow-md">
+                <a href="./" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Home</a>
+                <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">About</a>
+                <a href="./job.html" class="block px-4 py-2 text-gray-800 hover:text-pink-700">Jobs</a>
+
+            </div>
+        </div>
+
+
+        <div class="hidden md:flex space-x-4">
+            <a href="./" class="text-gray-800 hover:text-pink-700">Home</a>
+            <a href="./about.html" class="text-gray-800 hover:text-pink-700">About</a>
+            <a href="./job.html" class="text-gray-800 hover:text-pink-700">Jobs</a>
+
+        </div>
+    </nav>
+
+
+    <!-- Title  -->
+
+    <div class="flex w-full h-screen flex-row items-center justify-center gap-32 ">
+        <div id="jap" class="flex flex-col justify-center items-center">
+            <div class="text-5xl font-bold text-red-600 mb-8 opacity-0 animate-fade-in-up"
+                style="animation-duration: 1s; animation-delay: 0.2s; animation-fill-mode: forwards;">仕</div>
+            <div class="text-5xl font-bold text-red-600 mb-8 opacity-0 animate-fade-in-up"
+                style="animation-duration: 1s; animation-delay: 0.4s; animation-fill-mode: forwards;">事</div>
+            <div class="text-5xl font-bold text-red-600 mb-8 opacity-0 animate-fade-in-up"
+                style="animation-duration: 1s; animation-delay: 0.6s; animation-fill-mode: forwards;">を</div>
+            <div class="text-5xl font-bold text-red-600 mb-8 opacity-0 animate-fade-in-up"
+                style="animation-duration: 1s; animation-delay: 0.8s; animation-fill-mode: forwards;">探</div>
+            <div class="text-5xl font-bold text-red-600 mb-8 opacity-0 animate-fade-in-up"
+                style="animation-duration: 1s; animation-delay: 1s; animation-fill-mode: forwards;">す</div>
+        </div>
+    </div>
+
+
+
+    <!-- Para1 -->
+    <section class="p-6 " style="margin-bottom: 100px;">
+        <div class="max-w-screen-lg  mx-auto">
+            <h2 class="text-4xl font-bold text-left mb-8">Working in Japan: Embracing Tradition and Innovation</h2>
+            <div class="text-xl leading-relaxed">
+                <p class="mb-6">Working in Japan is a blend of <span class="font-bold">traditional values</span> and
+                    <span class="font-bold">cutting-edge innovation</span>. Japanese culture emphasizes <span
+                        class="font-bold">harmony</span>, <span class="font-bold">respect</span>, and <span
+                        class="font-bold">diligence</span> in the workplace, creating a unique atmosphere that values
+                    <span class="font-bold">teamwork</span> and <span class="font-bold">commitment</span>.
+                </p>
+                <p class="mb-6">As the renowned Japanese proverb says, <span
+                        class="italic font-medium text-gray-600">"継続は力なり"
+                        (Keizoku wa chikara nari)</span>, which translates to "<span class="font-bold">Perseverance is
+                        strength</span>." This quote embodies the spirit of Japanese work ethic, encouraging <span
+                        class="font-bold">dedication</span> and <span class="font-bold">resilience</span> in the face of
+                    challenges.</p>
+                <p class="mb-6">In Japanese workplaces, you'll experience <span class="font-bold">omotenashi</span>, the
+                    art of
+                    heartfelt hospitality, where colleagues and employers prioritize <span class="font-bold">mutual
+                        support</span> and <span class="font-bold">respect</span>. This approach fosters a sense of
+                    <span class="font-bold">belonging</span> and <span class="font-bold">purpose</span>, making every
+                    day a
+                    <span class="font-bold">rewarding journey</span>.
+                </p>
+                <p>Whether you're navigating the bustling streets of Tokyo or enjoying the serene landscapes of Kyoto,
+                    working in Japan offers a dynamic blend of <span class="font-bold">tradition</span> and <span
+                        class="font-bold">progress</span>, creating a vibrant canvas for <span
+                        class="font-bold">professional
+                        growth</span> and <span class="font-bold">cultural enrichment</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
+
+
+    <!-- Google Translate JavaScript API -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
